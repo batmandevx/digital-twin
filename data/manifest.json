@@ -1,0 +1,286 @@
+{
+ "start": "2026-10-05T00:00:00+05:30",
+ "cgm_step_min": 5,
+ "patients": [
+  {
+   "id": "SNJ-001",
+   "name": "Rajesh Kumar Verma",
+   "split": "test",
+   "persona": true,
+   "story": "Observes a full nine-day Navratri fast. Sabudana and kuttu meals cause the sharpest spikes of his year."
+  },
+  {
+   "id": "SNJ-002",
+   "name": "Lakshmi Narayanan",
+   "split": "test",
+   "persona": true,
+   "story": "'Thin-fat' phenotype at a normal BMI. Has rice-heavy lunches and is on glimepiride, so she spikes after lunch and can go low when lunch is late."
+  },
+  {
+   "id": "SNJ-003",
+   "name": "Arjun Mehta",
+   "split": "test",
+   "persona": true,
+   "story": "Software engineer with late dinners, short sleep and sprint-deadline stress. His wearable signals explain his spikes better than his diet does."
+  },
+  {
+   "id": "SNJ-004",
+   "name": "Farida Sheikh",
+   "split": "test",
+   "persona": true,
+   "story": "History of PCOS. Weekend biryani and evening chai-snacks drive her excursions."
+  },
+  {
+   "id": "SNJ-005",
+   "name": "Gurpreet Singh Sandhu",
+   "split": "test",
+   "persona": true,
+   "story": "Long-standing diabetes on basal insulin with early CKD. His parathas and missed metformin doses show up clearly in his twin."
+  },
+  {
+   "id": "SNJ-006",
+   "name": "Ananya Banerjee",
+   "split": "test",
+   "persona": true,
+   "story": "Well-controlled morning walker who takes a walk after most meals. She is the 'what good looks like' reference twin."
+  },
+  {
+   "id": "SNJ-007",
+   "name": "Nikhil Joshi",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-008",
+   "name": "Sneha Mohanty",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-009",
+   "name": "Kavita Gupta",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-010",
+   "name": "Sunita Singh",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-011",
+   "name": "Arun Nair",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-012",
+   "name": "Rohit Mukherjee",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-013",
+   "name": "Aarti Mehta",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-014",
+   "name": "Rupa Mukherjee",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-015",
+   "name": "Rahul Reddy",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-016",
+   "name": "Sneha Das",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-017",
+   "name": "Madhuri Joshi",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-018",
+   "name": "Divya Nair",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-019",
+   "name": "Sanjay Sharma",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-020",
+   "name": "Amit Verma",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-021",
+   "name": "Karthik Nair",
+   "split": "test",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-022",
+   "name": "Aarti Joshi",
+   "split": "test",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-023",
+   "name": "Rohit Banerjee",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-024",
+   "name": "Sneha Banerjee",
+   "split": "test",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-025",
+   "name": "Anjali Rao",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-026",
+   "name": "Pooja Yadav",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-027",
+   "name": "Ramesh Rao",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-028",
+   "name": "Moumita Ghosh",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-029",
+   "name": "Jignesh Kulkarni",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-030",
+   "name": "Aarti Deshmukh",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-031",
+   "name": "Snehal Mehta",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-032",
+   "name": "Sachin Joshi",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-033",
+   "name": "Prakash Naidu",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-034",
+   "name": "Rekha Agarwal",
+   "split": "test",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-035",
+   "name": "Rekha Verma",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-036",
+   "name": "Rupa Ghosh",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-037",
+   "name": "Arjun Shah",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-038",
+   "name": "Snehal Joshi",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-039",
+   "name": "Jignesh Mehta",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  },
+  {
+   "id": "SNJ-040",
+   "name": "Manoj Gupta",
+   "split": "train",
+   "persona": false,
+   "story": ""
+  }
+ ]
+}

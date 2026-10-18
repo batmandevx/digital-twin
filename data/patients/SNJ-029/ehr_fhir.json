@@ -1,0 +1,1217 @@
+{
+ "resourceType": "Bundle",
+ "type": "collection",
+ "id": "bundle-SNJ-029",
+ "meta": {
+  "tag": [
+   {
+    "code": "SYNTHETIC",
+    "display": "Synthetic data, not a real person"
+   }
+  ]
+ },
+ "entry": [
+  {
+   "fullUrl": "urn:uuid:SNJ-029-0",
+   "resource": {
+    "resourceType": "Patient",
+    "id": "SNJ-029",
+    "identifier": [
+     {
+      "system": "https://healthid.ndhm.gov.in",
+      "value": "91-5668-XXXX-5006",
+      "type": {
+       "text": "ABHA number (synthetic, masked)"
+      }
+     }
+    ],
+    "name": [
+     {
+      "use": "official",
+      "family": "Kulkarni",
+      "given": [
+       "Jignesh"
+      ]
+     }
+    ],
+    "gender": "male",
+    "birthDate": "1998-11-16",
+    "address": [
+     {
+      "city": "Pune",
+      "country": "IN"
+     }
+    ],
+    "extension": [
+     {
+      "url": "urn:sanjeevani:diet",
+      "valueString": "vegetarian"
+     },
+     {
+      "url": "urn:sanjeevani:region",
+      "valueString": "west"
+     },
+     {
+      "url": "urn:sanjeevani:synthetic",
+      "valueBoolean": true
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-1",
+   "resource": {
+    "resourceType": "Condition",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "44054006",
+       "display": "Diabetes mellitus type 2"
+      }
+     ],
+     "text": "Diabetes mellitus type 2"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "onsetDateTime": "2007-06-21T00:00:00+05:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-2",
+   "resource": {
+    "resourceType": "Condition",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "38341003",
+       "display": "Hypertensive disorder"
+      }
+     ],
+     "text": "Hypertensive disorder"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "onsetDateTime": "2015-05-13T00:00:00+05:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-3",
+   "resource": {
+    "resourceType": "Condition",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "55822004",
+       "display": "Hyperlipidemia"
+      }
+     ],
+     "text": "Hyperlipidemia"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "onsetDateTime": "2017-04-06T00:00:00+05:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-4",
+   "resource": {
+    "resourceType": "Condition",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "197321007",
+       "display": "Steatosis of liver"
+      }
+     ],
+     "text": "Steatosis of liver"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "onsetDateTime": "2024-10-03T00:00:00+05:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-5",
+   "resource": {
+    "resourceType": "Condition",
+    "clinicalStatus": {
+     "coding": [
+      {
+       "code": "active"
+      }
+     ]
+    },
+    "code": {
+     "coding": [
+      {
+       "system": "http://snomed.info/sct",
+       "code": "431856006",
+       "display": "Chronic kidney disease stage 2"
+      }
+     ],
+     "text": "Chronic kidney disease stage 2"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "onsetDateTime": "2024-10-03T00:00:00+05:30"
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-6",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "4548-4",
+       "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+      }
+     ],
+     "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-09-30T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 8.5,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-7",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "1558-6",
+       "display": "Fasting glucose [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Fasting glucose [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-09-30T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 171,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-8",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "4548-4",
+       "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+      }
+     ],
+     "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-06-25T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 8.3,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-9",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "1558-6",
+       "display": "Fasting glucose [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Fasting glucose [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-06-25T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 181,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-10",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "4548-4",
+       "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+      }
+     ],
+     "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-03-26T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 8.1,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-11",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "1558-6",
+       "display": "Fasting glucose [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Fasting glucose [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-03-26T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 176,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-12",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "4548-4",
+       "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+      }
+     ],
+     "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2025-12-25T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 7.9,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-13",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "1558-6",
+       "display": "Fasting glucose [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Fasting glucose [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2025-12-25T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 172,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-14",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "4548-4",
+       "display": "Hemoglobin A1c/Hemoglobin.total in Blood"
+      }
+     ],
+     "text": "Hemoglobin A1c/Hemoglobin.total in Blood"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2025-10-02T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 7.9,
+     "unit": "%",
+     "system": "http://unitsofmeasure.org",
+     "code": "%"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-15",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "1558-6",
+       "display": "Fasting glucose [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Fasting glucose [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2025-10-02T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 200,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-16",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "39156-5",
+       "display": "Body mass index (BMI) [Ratio]"
+      }
+     ],
+     "text": "Body mass index (BMI) [Ratio]"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-10-03T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 28.9,
+     "unit": "kg/m2",
+     "system": "http://unitsofmeasure.org",
+     "code": "kg/m2"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-17",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "29463-7",
+       "display": "Body weight"
+      }
+     ],
+     "text": "Body weight"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-10-03T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 80.0,
+     "unit": "kg",
+     "system": "http://unitsofmeasure.org",
+     "code": "kg"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-18",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8302-2",
+       "display": "Body height"
+      }
+     ],
+     "text": "Body height"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-10-03T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 1.66,
+     "unit": "m",
+     "system": "http://unitsofmeasure.org",
+     "code": "m"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-19",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8280-0",
+       "display": "Waist Circumference at umbilicus by Tape measure"
+      }
+     ],
+     "text": "Waist Circumference at umbilicus by Tape measure"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-10-03T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 100,
+     "unit": "cm",
+     "system": "http://unitsofmeasure.org",
+     "code": "cm"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-20",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8480-6",
+       "display": "Systolic blood pressure"
+      }
+     ],
+     "text": "Systolic blood pressure"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-10-03T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 135,
+     "unit": "mm[Hg]",
+     "system": "http://unitsofmeasure.org",
+     "code": "mm[Hg]"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-21",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "8462-4",
+       "display": "Diastolic blood pressure"
+      }
+     ],
+     "text": "Diastolic blood pressure"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-10-03T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 75,
+     "unit": "mm[Hg]",
+     "system": "http://unitsofmeasure.org",
+     "code": "mm[Hg]"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-22",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "18262-6",
+       "display": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay"
+      }
+     ],
+     "text": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-10-03T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 120,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-23",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2085-9",
+       "display": "Cholesterol in HDL [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Cholesterol in HDL [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-10-03T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 34,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-24",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2571-8",
+       "display": "Triglyceride [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Triglyceride [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-10-03T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 176,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-25",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "2160-0",
+       "display": "Creatinine [Mass/volume] in Serum or Plasma"
+      }
+     ],
+     "text": "Creatinine [Mass/volume] in Serum or Plasma"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-10-03T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 0.88,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/dL"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-26",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "33914-3",
+       "display": "Glomerular filtration rate/1.73 sq M.predicted"
+      }
+     ],
+     "text": "Glomerular filtration rate/1.73 sq M.predicted"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-10-03T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 77,
+     "unit": "mL/min/1.73m2",
+     "system": "http://unitsofmeasure.org",
+     "code": "mL/min/1.73m2"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-27",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "9318-7",
+       "display": "Albumin/Creatinine [Mass Ratio] in Urine"
+      }
+     ],
+     "text": "Albumin/Creatinine [Mass Ratio] in Urine"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2026-10-03T00:00:00+05:30",
+    "valueQuantity": {
+     "value": 38,
+     "unit": "mg/g",
+     "system": "http://unitsofmeasure.org",
+     "code": "mg/g"
+    }
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-28",
+   "resource": {
+    "resourceType": "Observation",
+    "status": "final",
+    "category": [
+     {
+      "coding": [
+       {
+        "code": "laboratory"
+       }
+      ]
+     }
+    ],
+    "code": {
+     "coding": [
+      {
+       "system": "http://loinc.org",
+       "code": "69548-6",
+       "display": "Genetic variant assessment"
+      }
+     ],
+     "text": "TCF7L2 rs7903146 genotype"
+    },
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "effectiveDateTime": "2025-08-29T00:00:00+05:30",
+    "valueCodeableConcept": {
+     "text": "C/T"
+    },
+    "component": [
+     {
+      "code": {
+       "text": "gene"
+      },
+      "valueString": "TCF7L2"
+     },
+     {
+      "code": {
+       "text": "dbSNP"
+      },
+      "valueString": "rs7903146"
+     },
+     {
+      "code": {
+       "text": "risk-allele-count"
+      },
+      "valueInteger": 1
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-29",
+   "resource": {
+    "resourceType": "RiskAssessment",
+    "status": "final",
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "method": {
+     "text": "South-Asian T2D polygenic risk score (simulated)"
+    },
+    "prediction": [
+     {
+      "outcome": {
+       "text": "T2D PRS z-score"
+      },
+      "relativeRisk": 0.03
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-30",
+   "resource": {
+    "resourceType": "MedicationStatement",
+    "status": "active",
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "medicationCodeableConcept": {
+     "coding": [
+      {
+       "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+       "code": "6809",
+       "display": "metformin"
+      }
+     ],
+     "text": "metformin"
+    },
+    "dosage": [
+     {
+      "text": "1500 mg/day in two divided doses",
+      "doseAndRate": [
+       {
+        "doseQuantity": {
+         "value": 1500.0,
+         "unit": "mg/day"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-31",
+   "resource": {
+    "resourceType": "MedicationStatement",
+    "status": "active",
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "medicationCodeableConcept": {
+     "coding": [
+      {
+       "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+       "code": "274783",
+       "display": "insulin glargine"
+      }
+     ],
+     "text": "insulin glargine"
+    },
+    "dosage": [
+     {
+      "text": "16 units at bedtime",
+      "doseAndRate": [
+       {
+        "doseQuantity": {
+         "value": 16,
+         "unit": "U/day"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-32",
+   "resource": {
+    "resourceType": "MedicationStatement",
+    "status": "active",
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "medicationCodeableConcept": {
+     "coding": [
+      {
+       "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+       "code": "73494",
+       "display": "telmisartan"
+      }
+     ],
+     "text": "telmisartan"
+    },
+    "dosage": [
+     {
+      "text": "40 mg once daily",
+      "doseAndRate": [
+       {
+        "doseQuantity": {
+         "value": 40,
+         "unit": "mg/day"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "fullUrl": "urn:uuid:SNJ-029-33",
+   "resource": {
+    "resourceType": "MedicationStatement",
+    "status": "active",
+    "subject": {
+     "reference": "Patient/SNJ-029"
+    },
+    "medicationCodeableConcept": {
+     "coding": [
+      {
+       "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+       "code": "83367",
+       "display": "atorvastatin"
+      }
+     ],
+     "text": "atorvastatin"
+    },
+    "dosage": [
+     {
+      "text": "20 mg at night",
+      "doseAndRate": [
+       {
+        "doseQuantity": {
+         "value": 20,
+         "unit": "mg/day"
+        }
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+timestamp,minute,food_id,food,carbs_g_est,meal_type
+2026-10-05T08:07+05:30,487,upma,Rava upma,31.0,breakfast
+2026-10-05T13:03+05:30,783,khichdi,Moong dal khichdi,51.0,lunch
+2026-10-05T21:13+05:30,1273,rice_sambar_rasam,"Rice, sambar & rasam",66.0,dinner
+2026-10-06T12:25+05:30,2185,brown_rice_rajma,Brown rice + rajma,67.0,lunch
+2026-10-06T21:04+05:30,2704,brown_rice_rajma,Brown rice + rajma,76.0,dinner
+2026-10-07T06:04+05:30,3244,poha,Poha,55.0,breakfast
+2026-10-07T13:33+05:30,3693,rice_sambar_rasam,"Rice, sambar & rasam",123.0,lunch
+2026-10-07T21:00+05:30,4140,rice_sambar_rasam,"Rice, sambar & rasam",79.0,dinner
+2026-10-08T06:04+05:30,4684,masala_dosa,Masala dosa,86.0,breakfast
+2026-10-08T13:11+05:30,5111,brown_rice_rajma,Brown rice + rajma,64.0,lunch
+2026-10-08T21:19+05:30,5599,khichdi,Moong dal khichdi,54.0,dinner
+2026-10-09T05:53+05:30,6113,poha,Poha,40.0,breakfast
+2026-10-09T13:17+05:30,6557,rice_dal_thali,Rice-dal thali,118.0,lunch
+2026-10-09T21:21+05:30,7041,chicken_biryani,Chicken biryani,134.0,dinner
+2026-10-10T08:20+05:30,7700,upma,Rava upma,44.0,breakfast
+2026-10-10T13:39+05:30,8019,brown_rice_rajma,Brown rice + rajma,69.0,lunch
+2026-10-10T18:04+05:30,8284,samosa_chai,Samosa + chai,55.0,snack
+2026-10-10T21:09+05:30,8469,rice_sambar_rasam,"Rice, sambar & rasam",110.0,dinner
+2026-10-11T07:44+05:30,9104,idli_sambar,Idli + sambar,50.0,breakfast
+2026-10-11T14:32+05:30,9512,rice_sambar_rasam,"Rice, sambar & rasam",131.0,lunch
+2026-10-11T17:16+05:30,9676,banana,Banana,36.0,snack
+2026-10-11T21:01+05:30,9901,chicken_biryani,Chicken biryani,126.0,dinner
+2026-10-12T13:27+05:30,10887,khichdi,Moong dal khichdi,66.0,lunch
+2026-10-12T21:44+05:30,11384,roti_dal_sabzi,"Roti, dal & sabzi",63.0,dinner
+2026-10-13T07:12+05:30,11952,oats_milk,Oats with milk,44.0,breakfast
+2026-10-13T12:42+05:30,12282,brown_rice_rajma,Brown rice + rajma,86.0,lunch
+2026-10-13T20:38+05:30,12758,chicken_biryani,Chicken biryani,119.0,dinner
+2026-10-14T05:29+05:30,13289,idli_sambar,Idli + sambar,59.0,breakfast
+2026-10-14T14:19+05:30,13819,rice_sambar_rasam,"Rice, sambar & rasam",165.0,lunch
+2026-10-14T20:26+05:30,14186,rice_dal_thali,Rice-dal thali,88.0,dinner
+2026-10-15T13:42+05:30,15222,khichdi,Moong dal khichdi,80.0,lunch
+2026-10-15T17:28+05:30,15448,banana,Banana,47.0,snack
+2026-10-15T20:22+05:30,15622,rice_dal_thali,Rice-dal thali,112.0,dinner
+2026-10-16T06:48+05:30,16248,poha,Poha,53.0,breakfast
+2026-10-16T13:12+05:30,16632,rice_sambar_rasam,"Rice, sambar & rasam",167.0,lunch
+2026-10-16T21:58+05:30,17158,rice_sambar_rasam,"Rice, sambar & rasam",89.0,dinner
+2026-10-17T07:51+05:30,17751,upma,Rava upma,50.0,breakfast
+2026-10-17T13:40+05:30,18100,khichdi,Moong dal khichdi,66.0,lunch
+2026-10-17T21:06+05:30,18546,khichdi,Moong dal khichdi,73.0,dinner
+2026-10-18T07:36+05:30,19176,idli_sambar,Idli + sambar,53.0,breakfast
+2026-10-18T14:40+05:30,19600,roti_dal_sabzi,"Roti, dal & sabzi",49.0,lunch
+2026-10-18T21:25+05:30,20005,rice_dal_thali,Rice-dal thali,128.0,dinner

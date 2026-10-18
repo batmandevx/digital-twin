@@ -1,0 +1,40 @@
+timestamp,minute,food_id,food,carbs_g_est,meal_type
+2026-10-05T03:52+05:30,232,bread_omelette,Bread omelette,24.0,breakfast
+2026-10-05T13:44+05:30,824,chicken_biryani,Chicken biryani,141.0,lunch
+2026-10-05T21:07+05:30,1267,roti_dal_sabzi,"Roti, dal & sabzi",64.0,dinner
+2026-10-06T07:18+05:30,1878,oats_milk,Oats with milk,35.0,breakfast
+2026-10-06T12:39+05:30,2199,chicken_biryani,Chicken biryani,150.0,lunch
+2026-10-06T20:54+05:30,2694,rice_dal_thali,Rice-dal thali,77.0,dinner
+2026-10-07T13:33+05:30,3693,chicken_biryani,Chicken biryani,116.0,lunch
+2026-10-07T20:36+05:30,4116,fish_rice,Fish curry + rice,86.0,dinner
+2026-10-08T05:33+05:30,4653,oats_milk,Oats with milk,35.0,breakfast
+2026-10-08T13:24+05:30,5124,rice_dal_thali,Rice-dal thali,109.0,lunch
+2026-10-08T20:46+05:30,5566,fish_rice,Fish curry + rice,101.0,dinner
+2026-10-09T06:12+05:30,6132,bread_omelette,Bread omelette,40.0,breakfast
+2026-10-09T13:07+05:30,6547,roti_dal_sabzi,"Roti, dal & sabzi",44.0,lunch
+2026-10-09T20:35+05:30,6995,khichdi,Moong dal khichdi,68.0,dinner
+2026-10-10T14:02+05:30,8042,chicken_biryani,Chicken biryani,107.0,lunch
+2026-10-10T20:53+05:30,8453,rice_dal_thali,Rice-dal thali,90.0,dinner
+2026-10-11T10:43+05:30,9283,bread_omelette,Bread omelette,34.0,breakfast
+2026-10-11T14:20+05:30,9500,roti_dal_sabzi,"Roti, dal & sabzi",91.0,lunch
+2026-10-11T20:45+05:30,9885,khichdi,Moong dal khichdi,34.0,dinner
+2026-10-12T06:42+05:30,10482,upma,Rava upma,73.0,breakfast
+2026-10-12T13:46+05:30,10906,khichdi,Moong dal khichdi,63.0,lunch
+2026-10-12T20:12+05:30,11292,roti_dal_sabzi,"Roti, dal & sabzi",36.0,dinner
+2026-10-13T05:26+05:30,11846,oats_milk,Oats with milk,32.0,breakfast
+2026-10-13T20:57+05:30,12777,khichdi,Moong dal khichdi,35.0,dinner
+2026-10-14T05:41+05:30,13301,oats_milk,Oats with milk,39.0,breakfast
+2026-10-14T13:28+05:30,13768,rice_dal_thali,Rice-dal thali,118.0,lunch
+2026-10-14T20:42+05:30,14202,chicken_biryani,Chicken biryani,110.0,dinner
+2026-10-15T05:38+05:30,14738,bread_omelette,Bread omelette,36.0,breakfast
+2026-10-15T13:47+05:30,15227,khichdi,Moong dal khichdi,85.0,lunch
+2026-10-15T20:54+05:30,15654,roti_dal_sabzi,"Roti, dal & sabzi",57.0,dinner
+2026-10-16T07:17+05:30,16277,poha,Poha,50.0,breakfast
+2026-10-16T13:01+05:30,16621,fish_rice,Fish curry + rice,71.0,lunch
+2026-10-16T16:53+05:30,16853,samosa_chai,Samosa + chai,42.0,snack
+2026-10-17T08:32+05:30,17792,upma,Rava upma,46.0,breakfast
+2026-10-17T14:36+05:30,18156,chicken_biryani,Chicken biryani,130.0,lunch
+2026-10-17T20:19+05:30,18499,chicken_biryani,Chicken biryani,75.0,dinner
+2026-10-18T07:52+05:30,19192,bread_omelette,Bread omelette,32.0,breakfast
+2026-10-18T14:04+05:30,19564,khichdi,Moong dal khichdi,86.0,lunch
+2026-10-18T20:36+05:30,19956,rice_dal_thali,Rice-dal thali,97.0,dinner

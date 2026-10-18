@@ -1,0 +1,49 @@
+timestamp,minute,food_id,food,carbs_g_est,meal_type
+2026-10-05T06:04+05:30,364,bread_omelette,Bread omelette,34.0,breakfast
+2026-10-05T13:35+05:30,815,roti_dal_sabzi,"Roti, dal & sabzi",67.0,lunch
+2026-10-05T17:10+05:30,1030,chai_biscuit,Chai + biscuits,36.0,snack
+2026-10-05T21:01+05:30,1261,roti_dal_sabzi,"Roti, dal & sabzi",57.0,dinner
+2026-10-06T07:04+05:30,1864,bread_omelette,Bread omelette,53.0,breakfast
+2026-10-06T13:07+05:30,2227,paneer_roti,Paneer sabzi + roti,66.0,lunch
+2026-10-06T20:21+05:30,2661,millet_roti_sabzi,Jowar/ragi roti + sabzi,36.0,dinner
+2026-10-07T06:17+05:30,3257,aloo_paratha,Aloo paratha + curd,33.0,breakfast
+2026-10-07T12:13+05:30,3613,khichdi,Moong dal khichdi,55.0,lunch
+2026-10-07T16:57+05:30,3897,chai_biscuit,Chai + biscuits,27.0,snack
+2026-10-07T21:02+05:30,4142,millet_roti_sabzi,Jowar/ragi roti + sabzi,40.0,dinner
+2026-10-08T06:12+05:30,4692,poha,Poha,34.0,breakfast
+2026-10-08T20:52+05:30,5572,millet_roti_sabzi,Jowar/ragi roti + sabzi,38.0,dinner
+2026-10-09T07:14+05:30,6194,poha,Poha,57.0,breakfast
+2026-10-09T13:18+05:30,6558,rice_dal_thali,Rice-dal thali,87.0,lunch
+2026-10-09T20:51+05:30,7011,chole_bhature,Chole bhature,151.0,dinner
+2026-10-10T08:52+05:30,7732,besan_chilla,Besan chilla,21.0,breakfast
+2026-10-10T11:38+05:30,7898,chai_biscuit,Chai + biscuits,16.0,snack
+2026-10-10T14:42+05:30,8082,khichdi,Moong dal khichdi,35.0,lunch
+2026-10-10T20:13+05:30,8413,roti_dal_sabzi,"Roti, dal & sabzi",45.0,dinner
+2026-10-11T09:29+05:30,9209,aloo_paratha,Aloo paratha + curd,57.0,breakfast
+2026-10-11T13:16+05:30,9436,chole_bhature,Chole bhature,88.0,lunch
+2026-10-11T19:00+05:30,9780,mithai,Mithai (sweets),64.0,festival
+2026-10-11T21:38+05:30,9938,chole_bhature,Chole bhature,96.0,dinner
+2026-10-12T07:09+05:30,10509,aloo_paratha,Aloo paratha + curd,45.0,breakfast
+2026-10-12T14:11+05:30,10931,paneer_roti,Paneer sabzi + roti,53.0,lunch
+2026-10-12T21:16+05:30,11356,khichdi,Moong dal khichdi,41.0,dinner
+2026-10-13T06:58+05:30,11938,poha,Poha,63.0,breakfast
+2026-10-13T13:02+05:30,12302,paneer_roti,Paneer sabzi + roti,33.0,lunch
+2026-10-13T16:52+05:30,12532,banana,Banana,26.0,snack
+2026-10-13T20:31+05:30,12751,paneer_roti,Paneer sabzi + roti,83.0,dinner
+2026-10-14T05:36+05:30,13296,oats_milk,Oats with milk,36.0,breakfast
+2026-10-14T14:07+05:30,13807,paneer_roti,Paneer sabzi + roti,87.0,lunch
+2026-10-14T18:16+05:30,14056,chai_biscuit,Chai + biscuits,24.0,snack
+2026-10-14T20:28+05:30,14188,khichdi,Moong dal khichdi,71.0,dinner
+2026-10-15T06:38+05:30,14798,bread_omelette,Bread omelette,34.0,breakfast
+2026-10-15T10:57+05:30,15057,chai_biscuit,Chai + biscuits,33.0,snack
+2026-10-15T13:24+05:30,15204,khichdi,Moong dal khichdi,71.0,lunch
+2026-10-15T20:47+05:30,15647,chole_bhature,Chole bhature,67.0,dinner
+2026-10-16T07:04+05:30,16264,bread_omelette,Bread omelette,49.0,breakfast
+2026-10-16T20:26+05:30,17066,khichdi,Moong dal khichdi,79.0,dinner
+2026-10-17T06:43+05:30,17683,bread_omelette,Bread omelette,44.0,breakfast
+2026-10-17T13:47+05:30,18107,paneer_roti,Paneer sabzi + roti,63.0,lunch
+2026-10-17T20:15+05:30,18495,rice_dal_thali,Rice-dal thali,61.0,dinner
+2026-10-18T07:17+05:30,19157,bread_omelette,Bread omelette,37.0,breakfast
+2026-10-18T13:35+05:30,19535,chole_bhature,Chole bhature,89.0,lunch
+2026-10-18T17:42+05:30,19782,chai_biscuit,Chai + biscuits,25.0,snack
+2026-10-18T20:30+05:30,19950,paneer_roti,Paneer sabzi + roti,57.0,dinner

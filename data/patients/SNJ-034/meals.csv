@@ -1,0 +1,45 @@
+timestamp,minute,food_id,food,carbs_g_est,meal_type
+2026-10-05T07:40+05:30,460,besan_chilla,Besan chilla,37.0,breakfast
+2026-10-05T13:34+05:30,814,khichdi,Moong dal khichdi,56.0,lunch
+2026-10-06T05:52+05:30,1792,bread_omelette,Bread omelette,21.0,breakfast
+2026-10-06T12:39+05:30,2199,paneer_roti,Paneer sabzi + roti,51.0,lunch
+2026-10-06T20:18+05:30,2658,roti_dal_sabzi,"Roti, dal & sabzi",47.0,dinner
+2026-10-07T05:13+05:30,3193,oats_milk,Oats with milk,24.0,breakfast
+2026-10-07T14:24+05:30,3744,chole_bhature,Chole bhature,98.0,lunch
+2026-10-07T20:49+05:30,4129,rice_dal_thali,Rice-dal thali,91.0,dinner
+2026-10-08T05:25+05:30,4645,poha,Poha,39.0,breakfast
+2026-10-08T14:03+05:30,5163,millet_roti_sabzi,Jowar/ragi roti + sabzi,45.0,lunch
+2026-10-08T20:22+05:30,5542,chole_bhature,Chole bhature,51.0,dinner
+2026-10-09T13:52+05:30,6592,millet_roti_sabzi,Jowar/ragi roti + sabzi,31.0,lunch
+2026-10-09T17:08+05:30,6788,banana,Banana,38.0,snack
+2026-10-10T07:41+05:30,7661,oats_milk,Oats with milk,36.0,breakfast
+2026-10-10T14:00+05:30,8040,paneer_roti,Paneer sabzi + roti,49.0,lunch
+2026-10-10T20:43+05:30,8443,roti_dal_sabzi,"Roti, dal & sabzi",38.0,dinner
+2026-10-11T10:44+05:30,9284,chai_biscuit,Chai + biscuits,20.0,snack
+2026-10-11T13:46+05:30,9466,sabudana_khichdi,Sabudana khichdi,69.0,lunch
+2026-10-11T16:56+05:30,9656,chai_biscuit,Chai + biscuits,36.0,snack
+2026-10-11T18:22+05:30,9742,mithai,Mithai (sweets),54.0,festival
+2026-10-11T20:37+05:30,9877,kuttu_puri_aloo,Kuttu puri + aloo,48.0,dinner
+2026-10-12T05:39+05:30,10419,fruit_plate,Fruit plate,37.0,breakfast
+2026-10-12T12:08+05:30,10808,chai_biscuit,Chai + biscuits,24.0,snack
+2026-10-12T13:19+05:30,10879,kuttu_puri_aloo,Kuttu puri + aloo,50.0,lunch
+2026-10-12T20:38+05:30,11318,sabudana_khichdi,Sabudana khichdi,39.0,dinner
+2026-10-13T06:50+05:30,11930,sweet_lassi,Sweet lassi,45.0,breakfast
+2026-10-13T12:55+05:30,12295,sabudana_khichdi,Sabudana khichdi,72.0,lunch
+2026-10-14T06:26+05:30,13346,fruit_plate,Fruit plate,39.0,breakfast
+2026-10-14T10:43+05:30,13603,chai_biscuit,Chai + biscuits,39.0,snack
+2026-10-14T13:14+05:30,13754,sabudana_khichdi,Sabudana khichdi,72.0,lunch
+2026-10-14T18:04+05:30,14044,samosa_chai,Samosa + chai,39.0,snack
+2026-10-14T20:16+05:30,14176,kuttu_puri_aloo,Kuttu puri + aloo,77.0,dinner
+2026-10-15T05:38+05:30,14738,fruit_plate,Fruit plate,33.0,breakfast
+2026-10-15T16:41+05:30,15401,roasted_chana,Roasted chana,15.0,snack
+2026-10-15T20:49+05:30,15649,kuttu_puri_aloo,Kuttu puri + aloo,80.0,dinner
+2026-10-16T06:18+05:30,16218,sweet_lassi,Sweet lassi,51.0,breakfast
+2026-10-16T12:28+05:30,16588,sabudana_khichdi,Sabudana khichdi,113.0,lunch
+2026-10-16T20:44+05:30,17084,kuttu_puri_aloo,Kuttu puri + aloo,61.0,dinner
+2026-10-17T06:21+05:30,17661,sweet_lassi,Sweet lassi,29.0,breakfast
+2026-10-17T13:42+05:30,18102,sabudana_khichdi,Sabudana khichdi,54.0,lunch
+2026-10-17T21:09+05:30,18549,sabudana_khichdi,Sabudana khichdi,114.0,dinner
+2026-10-18T06:45+05:30,19125,sweet_lassi,Sweet lassi,35.0,breakfast
+2026-10-18T12:55+05:30,19495,kuttu_puri_aloo,Kuttu puri + aloo,74.0,lunch
+2026-10-18T21:12+05:30,19992,sabudana_khichdi,Sabudana khichdi,57.0,dinner
