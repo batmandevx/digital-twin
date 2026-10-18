@@ -20,10 +20,10 @@
 
 | | |
 |---|---|
-| **Team name** | `<TEAM NAME>` |
-| **College / incubator** | `<COLLEGE / INCUBATOR NAME>` |
-| **Team leader** | `<NAME>` · `<EMAIL>` |
-| **Members** | `<Member 2>` · `<Member 3>` · `<Member 4>` |
+| **Team name** | Ayush Upadhyay (solo team) |
+| **College** | Vellore Institute of Technology (VIT), Chennai |
+| **Team leader** | Ayush Upadhyay |
+| **Members** | Ayush Upadhyay |
 
 ## 2. Project title
 
