@@ -17,15 +17,14 @@ def main():
         print("== Generating synthetic cohort (FHIR EHR + wearable streams) ==")
         from sanjeevani.synth import generate
         generate.main()
-    need_train = rebuild or not (MODEL_DIR / "models.pkl").exists()
+    need_train = rebuild or not any(MODEL_DIR.glob("models.pkl.gz.part*"))
     if not need_train:
         try:                                   # pickles from another scikit-learn version -> retrain
-            import pickle
             import warnings
+            from sanjeevani.pipeline import load_models
             with warnings.catch_warnings():
                 warnings.simplefilter("error")
-                with open(MODEL_DIR / "models.pkl", "rb") as f:
-                    pickle.load(f)
+                load_models()
         except Exception as e:
             print(f"Saved models not loadable here ({type(e).__name__}); retraining.")
             need_train = True

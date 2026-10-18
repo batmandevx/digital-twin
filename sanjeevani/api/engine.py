@@ -1,4 +1,5 @@
 """Runtime engine: loads trained artefacts and answers dashboard queries."""
+import gzip
 import json
 import pickle
 from datetime import timedelta
@@ -10,7 +11,7 @@ from ..config import (MODEL_DIR, DATA_DIR, DAY, CGM_STEP, START, HORIZONS, CALIB
                       SPIKE_MGDL, FESTIVALS, NAVRATRI_DAYS)
 from ..foods import FOODS
 from ..ml import features as F
-from ..pipeline import predict
+from ..pipeline import predict, load_models
 from ..twin.core import DigitalTwin, CGM_LAG
 from ..twin.patient import load_cohort
 from ..twin import scenarios as S
@@ -27,8 +28,7 @@ def _r(x, n=1):
 class Engine:
     def __init__(self):
         recs = load_cohort()
-        with open(MODEL_DIR / "models.pkl", "rb") as f:
-            self.models = pickle.load(f)
+        self.models = load_models()
         with open(MODEL_DIR / "twins.json") as f:
             cal = json.load(f)
         with open(MODEL_DIR / "metrics.json") as f:

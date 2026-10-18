@@ -10,6 +10,7 @@
 5. Evaluate on held-out patients that were never seen in training against
    persistence, linear-trend, twin-only and ML-only baselines.
 """
+import gzip
 import json
 import pickle
 import time
@@ -299,6 +300,25 @@ def learning_curve(rows, sizes=(2, 4, 8, 16, 24), reps=3):
     return out
 
 
+PART = 2_000_000
+
+
+def save_models(models):
+    """gzip-pickled models split into ~2 MB parts (friendly to slow git uploads)."""
+    blob = gzip.compress(pickle.dumps(models), 6)
+    for old in MODEL_DIR.glob("models.pkl.gz.part*"):
+        old.unlink()
+    for i in range(0, len(blob), PART):
+        (MODEL_DIR / f"models.pkl.gz.part{i // PART}").write_bytes(blob[i:i + PART])
+
+
+def load_models():
+    parts = sorted(MODEL_DIR.glob("models.pkl.gz.part*"), key=lambda p: int(p.name.rsplit("part", 1)[1]))
+    if not parts:
+        raise FileNotFoundError("models not trained yet")
+    return pickle.loads(gzip.decompress(b"".join(p.read_bytes() for p in parts)))
+
+
 def _jsonable(o):
     if isinstance(o, dict):
         return {str(k): _jsonable(v) for k, v in o.items()}
@@ -336,8 +356,7 @@ def main():
     res["thresholds"] = models["thr"]
     res["conformal"] = models["conformal"]
     MODEL_DIR.mkdir(exist_ok=True)
-    with open(MODEL_DIR / "models.pkl", "wb") as f:
-        pickle.dump(models, f)
+    save_models(models)
     np.savez_compressed(MODEL_DIR / "twin_states.npz", **{tw.rec.pid: tw.states.astype(np.float32) for tw in twins},
                         **{tw.rec.pid + "_open": tw.open_loop.astype(np.float32) for tw in twins})
     with open(MODEL_DIR / "twins.json", "w") as f:
