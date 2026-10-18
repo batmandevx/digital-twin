@@ -1,0 +1,505 @@
+{
+ "name": "Ananya Banerjee",
+ "sex": "F",
+ "age": 41,
+ "region": "east",
+ "city": "Kolkata",
+ "veg": false,
+ "bmi": 23.4,
+ "waist": 84,
+ "years_dx": 2,
+ "fpg": 118,
+ "si": 0.00062,
+ "gamma": 0.13,
+ "metformin": 0.5,
+ "su": false,
+ "insulin_u": 0,
+ "sitagliptin": false,
+ "adherence": 0.96,
+ "navratri": "none",
+ "late_dinner": 0.0,
+ "sleep_h": 7.4,
+ "walker": 0.9,
+ "stress_prone": 0.15,
+ "tcf7l2": 0,
+ "story": "Well-controlled morning walker who takes a walk after most meals. She is the 'what good looks like' reference twin.",
+ "id": "SNJ-006",
+ "height_m": 1.5,
+ "weight_kg": 52.6,
+ "truth": {
+  "Gb": 114.0,
+  "SG": 0.010136183244864407,
+  "SI": 0.00062,
+  "gamma": 0.13,
+  "Ib": 14.448462168442372,
+  "BW": 52.6,
+  "k_ex": 0.00975910553722944,
+  "egp_stress": 0.3320412664683516,
+  "circ_amp": 0.25635475974313715,
+  "sleep_sens": 0.09902666132928785,
+  "h_shift": 0.0,
+  "dawn": 0.23640957395039597,
+  "si_daily_sd": 0.1
+ },
+ "rhr": 68,
+ "hrv_base": 35.0,
+ "prs": -0.44,
+ "family_history": true,
+ "htn": true,
+ "dyslipidemia": false,
+ "osa": false,
+ "pcos": false,
+ "nafld": false,
+ "meals_true": [
+  {
+   "minute": 439,
+   "food": "upma",
+   "carbs": 39.3,
+   "kind": "breakfast"
+  },
+  {
+   "minute": 652,
+   "food": "chai_biscuit",
+   "carbs": 21.3,
+   "kind": "snack"
+  },
+  {
+   "minute": 816,
+   "food": "roti_dal_sabzi",
+   "carbs": 58.1,
+   "kind": "lunch"
+  },
+  {
+   "minute": 1073,
+   "food": "chai_biscuit",
+   "carbs": 23.0,
+   "kind": "snack"
+  },
+  {
+   "minute": 1258,
+   "food": "rice_dal_thali",
+   "carbs": 80.2,
+   "kind": "dinner"
+  },
+  {
+   "minute": 1868,
+   "food": "bread_omelette",
+   "carbs": 22.1,
+   "kind": "breakfast"
+  },
+  {
+   "minute": 2207,
+   "food": "roti_dal_sabzi",
+   "carbs": 64.1,
+   "kind": "lunch"
+  },
+  {
+   "minute": 2412,
+   "food": "sprouts_chaat",
+   "carbs": 26.3,
+   "kind": "snack"
+  },
+  {
+   "minute": 2660,
+   "food": "fish_rice",
+   "carbs": 91.2,
+   "kind": "dinner"
+  },
+  {
+   "minute": 3397,
+   "food": "oats_milk",
+   "carbs": 30.5,
+   "kind": "breakfast"
+  },
+  {
+   "minute": 3527,
+   "food": "chai_biscuit",
+   "carbs": 22.2,
+   "kind": "snack"
+  },
+  {
+   "minute": 3701,
+   "food": "rice_dal_thali",
+   "carbs": 70.7,
+   "kind": "lunch"
+  },
+  {
+   "minute": 4072,
+   "food": "chicken_biryani",
+   "carbs": 97.8,
+   "kind": "dinner"
+  },
+  {
+   "minute": 4719,
+   "food": "poha",
+   "carbs": 36.0,
+   "kind": "breakfast"
+  },
+  {
+   "minute": 4999,
+   "food": "chai_biscuit",
+   "carbs": 18.3,
+   "kind": "snack"
+  },
+  {
+   "minute": 5083,
+   "food": "fish_rice",
+   "carbs": 90.9,
+   "kind": "lunch"
+  },
+  {
+   "minute": 5366,
+   "food": "roasted_chana",
+   "carbs": 15.6,
+   "kind": "snack"
+  },
+  {
+   "minute": 5594,
+   "food": "rice_dal_thali",
+   "carbs": 68.5,
+   "kind": "dinner"
+  },
+  {
+   "minute": 6267,
+   "food": "poha",
+   "carbs": 37.3,
+   "kind": "breakfast"
+  },
+  {
+   "minute": 6396,
+   "food": "chai_biscuit",
+   "carbs": 17.4,
+   "kind": "snack"
+  },
+  {
+   "minute": 6594,
+   "food": "khichdi",
+   "carbs": 44.0,
+   "kind": "lunch"
+  },
+  {
+   "minute": 6753,
+   "food": "chai_biscuit",
+   "carbs": 29.8,
+   "kind": "snack"
+  },
+  {
+   "minute": 7008,
+   "food": "roti_dal_sabzi",
+   "carbs": 51.0,
+   "kind": "dinner"
+  },
+  {
+   "minute": 7663,
+   "food": "bread_omelette",
+   "carbs": 28.8,
+   "kind": "breakfast"
+  },
+  {
+   "minute": 8037,
+   "food": "chicken_biryani",
+   "carbs": 87.5,
+   "kind": "lunch"
+  },
+  {
+   "minute": 8235,
+   "food": "sprouts_chaat",
+   "carbs": 18.3,
+   "kind": "snack"
+  },
+  {
+   "minute": 8412,
+   "food": "rice_dal_thali",
+   "carbs": 79.2,
+   "kind": "dinner"
+  },
+  {
+   "minute": 9127,
+   "food": "poha",
+   "carbs": 43.7,
+   "kind": "breakfast"
+  },
+  {
+   "minute": 9466,
+   "food": "khichdi",
+   "carbs": 51.1,
+   "kind": "lunch"
+  },
+  {
+   "minute": 9677,
+   "food": "roasted_chana",
+   "carbs": 14.1,
+   "kind": "snack"
+  },
+  {
+   "minute": 9888,
+   "food": "fish_rice",
+   "carbs": 64.7,
+   "kind": "dinner"
+  },
+  {
+   "minute": 10457,
+   "food": "poha",
+   "carbs": 30.7,
+   "kind": "breakfast"
+  },
+  {
+   "minute": 10883,
+   "food": "khichdi",
+   "carbs": 57.4,
+   "kind": "lunch"
+  },
+  {
+   "minute": 11093,
+   "food": "chai_biscuit",
+   "carbs": 31.2,
+   "kind": "snack"
+  },
+  {
+   "minute": 11345,
+   "food": "khichdi",
+   "carbs": 56.5,
+   "kind": "dinner"
+  },
+  {
+   "minute": 11983,
+   "food": "bread_omelette",
+   "carbs": 25.8,
+   "kind": "breakfast"
+  },
+  {
+   "minute": 12353,
+   "food": "fish_rice",
+   "carbs": 68.1,
+   "kind": "lunch"
+  },
+  {
+   "minute": 12593,
+   "food": "banana",
+   "carbs": 24.5,
+   "kind": "snack"
+  },
+  {
+   "minute": 12693,
+   "food": "roti_dal_sabzi",
+   "carbs": 53.8,
+   "kind": "dinner"
+  },
+  {
+   "minute": 13415,
+   "food": "oats_milk",
+   "carbs": 33.8,
+   "kind": "breakfast"
+  },
+  {
+   "minute": 13823,
+   "food": "chicken_biryani",
+   "carbs": 105.6,
+   "kind": "lunch"
+  },
+  {
+   "minute": 13977,
+   "food": "roasted_chana",
+   "carbs": 20.1,
+   "kind": "snack"
+  },
+  {
+   "minute": 14195,
+   "food": "rice_dal_thali",
+   "carbs": 82.4,
+   "kind": "dinner"
+  },
+  {
+   "minute": 14861,
+   "food": "oats_milk",
+   "carbs": 34.3,
+   "kind": "breakfast"
+  },
+  {
+   "minute": 15087,
+   "food": "chai_biscuit",
+   "carbs": 20.7,
+   "kind": "snack"
+  },
+  {
+   "minute": 15184,
+   "food": "chicken_biryani",
+   "carbs": 79.2,
+   "kind": "lunch"
+  },
+  {
+   "minute": 15399,
+   "food": "chai_biscuit",
+   "carbs": 27.3,
+   "kind": "snack"
+  },
+  {
+   "minute": 15600,
+   "food": "chicken_biryani",
+   "carbs": 78.5,
+   "kind": "dinner"
+  },
+  {
+   "minute": 16235,
+   "food": "poha",
+   "carbs": 46.2,
+   "kind": "breakfast"
+  },
+  {
+   "minute": 16650,
+   "food": "chicken_biryani",
+   "carbs": 82.5,
+   "kind": "lunch"
+  },
+  {
+   "minute": 17088,
+   "food": "roti_dal_sabzi",
+   "carbs": 44.9,
+   "kind": "dinner"
+  },
+  {
+   "minute": 17791,
+   "food": "bread_omelette",
+   "carbs": 27.3,
+   "kind": "breakfast"
+  },
+  {
+   "minute": 18156,
+   "food": "fish_rice",
+   "carbs": 92.1,
+   "kind": "lunch"
+  },
+  {
+   "minute": 18308,
+   "food": "sprouts_chaat",
+   "carbs": 20.6,
+   "kind": "snack"
+  },
+  {
+   "minute": 18509,
+   "food": "khichdi",
+   "carbs": 51.2,
+   "kind": "dinner"
+  },
+  {
+   "minute": 19222,
+   "food": "upma",
+   "carbs": 33.7,
+   "kind": "breakfast"
+  },
+  {
+   "minute": 19313,
+   "food": "chai_biscuit",
+   "carbs": 18.3,
+   "kind": "snack"
+  },
+  {
+   "minute": 19639,
+   "food": "khichdi",
+   "carbs": 51.6,
+   "kind": "lunch"
+  },
+  {
+   "minute": 19989,
+   "food": "khichdi",
+   "carbs": 46.3,
+   "kind": "dinner"
+  }
+ ],
+ "nights": [
+  {
+   "night": 0,
+   "bed": -111,
+   "wake": 381,
+   "hours": 8.202752489555396
+  },
+  {
+   "night": 1,
+   "bed": 1393,
+   "wake": 1809,
+   "hours": 6.93665785637376
+  },
+  {
+   "night": 2,
+   "bed": 2854,
+   "wake": 3338,
+   "hours": 8.06784312024163
+  },
+  {
+   "night": 3,
+   "bed": 4246,
+   "wake": 4670,
+   "hours": 7.0736982387700955
+  },
+  {
+   "night": 4,
+   "bed": 5735,
+   "wake": 6243,
+   "hours": 8.478828365335396
+  },
+  {
+   "night": 5,
+   "bed": 7142,
+   "wake": 7578,
+   "hours": 7.278456696314864
+  },
+  {
+   "night": 6,
+   "bed": 8620,
+   "wake": 9082,
+   "hours": 7.704558478081623
+  },
+  {
+   "night": 7,
+   "bed": 10037,
+   "wake": 10406,
+   "hours": 6.162909587388872
+  },
+  {
+   "night": 8,
+   "bed": 11501,
+   "wake": 11941,
+   "hours": 7.3447006502190195
+  },
+  {
+   "night": 9,
+   "bed": 12932,
+   "wake": 13369,
+   "hours": 7.297232076023756
+  },
+  {
+   "night": 10,
+   "bed": 14344,
+   "wake": 14786,
+   "hours": 7.373339769911654
+  },
+  {
+   "night": 11,
+   "bed": 15832,
+   "wake": 16169,
+   "hours": 5.62213369502586
+  },
+  {
+   "night": 12,
+   "bed": 17242,
+   "wake": 17757,
+   "hours": 8.59477264528621
+  },
+  {
+   "night": 13,
+   "bed": 18710,
+   "wake": 19168,
+   "hours": 7.641235616567452
+  },
+  {
+   "night": 14,
+   "bed": 20134,
+   "wake": 20475,
+   "hours": 5.696680273119986
+  }
+ ],
+ "fasting_days": [],
+ "stress_days": [],
+ "mean_glucose": 118.55082496933511,
+ "hba1c_true": 5.9
+}
