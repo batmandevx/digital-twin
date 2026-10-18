@@ -6,9 +6,13 @@
 
 ![Sanjeevani Twin clinician command centre](docs/images/dashboard.png)
 
+[![Watch the demo video](https://img.youtube.com/vi/8IZ1PinY-RI/hqdefault.jpg)](https://youtu.be/8IZ1PinY-RI)
+
+▶️ **Watch the demo:** https://youtu.be/8IZ1PinY-RI
+
 | | |
 |---|---|
-| 🎥 **Demo video (≥ 20 min)** | **`<PASTE UNLISTED YOUTUBE LINK HERE>`** |
+| 🎥 **Demo video (≥ 20 min)** | **https://youtu.be/8IZ1PinY-RI** |
 | 🧭 **Architecture diagram** | [docs/Architecture_Diagram.pdf](docs/Architecture_Diagram.pdf) |
 | 📊 **Presentation** | [docs/Presentation.pdf](docs/Presentation.pdf) |
 | ⚖️ **License** | [MIT](LICENSE) for code · CC0 for the synthetic dataset · three.js (MIT) vendored |
