@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sanjeevani Twin: Architecture</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  @page { size: 420mm 297mm; margin: 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; width: 420mm; height: 297mm; background: radial-gradient(1200px 700px at 30% 0%, #0f2554, #050a18 70%); color: #e8f1ff; font: 12px/1.45 Inter, sans-serif; padding: 14mm 14mm 10mm; position: relative; overflow: hidden; }
+  h1 { font: 700 30px "Space Grotesk"; margin: 0; letter-spacing: .02em; }
+  h1 span { color: #37e2ff; font-weight: 500; }
+  .sub { color: #9fb2d8; font-size: 13.5px; margin-top: 4px; }
+  .lanes { display: grid; grid-template-columns: 1fr 34px 1.05fr 34px 1.25fr 34px 1.1fr 34px 1.05fr 34px 1.1fr; margin-top: 12mm; align-items: stretch; }
+  .lane { border: 1px solid rgba(130,190,255,.18); border-radius: 16px; background: rgba(13,24,54,.7); padding: 12px; display: flex; flex-direction: column; gap: 8px; position: relative; }
+  .lane h2 { font: 600 13px "Space Grotesk"; margin: 0 0 2px; letter-spacing: .12em; text-transform: uppercase; color: var(--c); }
+  .lane .n { position: absolute; top: -12px; left: 12px; background: var(--c); color: #04121c; font: 700 11px "JetBrains Mono"; border-radius: 99px; padding: 2px 8px; }
+  .box { border: 1px solid rgba(255,255,255,.1); border-left: 3px solid var(--c); border-radius: 10px; padding: 8px 10px; background: rgba(255,255,255,.03); }
+  .box b { display: block; font-weight: 600; font-size: 12.5px; }
+  .box small { color: #9fb2d8; font-size: 11px; display: block; margin-top: 2px; }
+  .arrow { display: grid; place-items: center; }
+  .arrow svg { width: 34px; height: 60px; }
+  .code { font: 10.5px "JetBrains Mono"; color: #9fd9ff; }
+  .bottom { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 12px; margin-top: 10mm; }
+  .panel { border: 1px dashed rgba(130,190,255,.3); border-radius: 14px; padding: 12px 14px; background: rgba(13,24,54,.5); }
+  .panel h3 { margin: 0 0 6px; font: 600 13px "Space Grotesk"; color: #37e2ff; }
+  .panel ul { margin: 0; padding-left: 16px; color: #c9d6f0; }
+  .panel li { margin: 2px 0; }
+  .metric { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .metric div { background: rgba(55,226,255,.08); border-radius: 10px; padding: 8px; }
+  .metric b { font: 700 20px "Space Grotesk"; display: block; }
+  .metric span { color: #9fb2d8; font-size: 10.5px; }
+  .foot { position: absolute; bottom: 7mm; left: 14mm; right: 14mm; display: flex; justify-content: space-between; color: #5d6f95; font-size: 11px; }
+  .loop { position: absolute; left: 14mm; right: 14mm; top: 128mm; height: 0; }
+</style>
+</head>
+<body>
+  <h1>Sanjeevani <span>Twin</span> · System Architecture</h1>
+  <div class="sub">A hybrid physiology + AI digital twin for Type 2 Diabetes in India. It fuses a static EHR with dynamic wearable streams, predicts glucose spikes 2 h ahead, explains them and simulates interventions.</div>
+
+  <div class="lanes">
+    <div class="lane" style="--c:#c4a7ff"><span class="n">1</span><h2>Data sources</h2>
+      <div class="box"><b>Static · EHR (FHIR R4)</b><small>Demographics, diagnoses (SNOMED-CT), labs (LOINC: HbA1c, FPG, lipids, eGFR), meds (RxNorm), TCF7L2 genotype, polygenic risk, family history. Masked ABHA ID</small></div>
+      <div class="box"><b>Dynamic · wearables</b><small>CGM every 5 min · heart rate · HRV (RMSSD) · sleep stages · steps (Apple Health / Google Fit-like)</small></div>
+      <div class="box"><b>Patient logs</b><small>Meals from a 28-item Indian food library (GI-aware), medication doses</small></div>
+      <div class="box"><b>Synthetic cohort generator</b><small>40 Indian "virtual humans" × 14 days. Regional diets, Navratri fasting, late dinners, stress, sensor lag/noise/dropouts. Synthea-compatible</small></div>
+    </div>
+    <div class="arrow"><svg viewBox="0 0 34 60"><path d="M2 30h26M20 20l10 10-10 10" fill="none" stroke="#37e2ff" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+    <div class="lane" style="--c:#5aa9ff"><span class="n">2</span><h2>Ingest &amp; harmonise</h2>
+      <div class="box"><b>FHIR parser</b><small>LOINC/SNOMED/RxNorm → clinical profile; tolerant of partial records</small></div>
+      <div class="box"><b>Sleep episode detection</b><small>stage runs → hours, deep/REM fractions → sleep debt</small></div>
+      <div class="box"><b>Stress inference</b><small>HRV suppression + HR elevation beyond activity → latent stress 0–1</small></div>
+      <div class="box"><b>Adherence &amp; habits</b><small>missed metformin doses → hepatic effect; usual meal slots learned in 3 days</small></div>
+      <div class="box"><b>Festival awareness</b><small>fasting foods in the log → expects sabudana/kuttu meals</small></div>
+    </div>
+    <div class="arrow"><svg viewBox="0 0 34 60"><path d="M2 30h26M20 20l10 10-10 10" fill="none" stroke="#37e2ff" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+    <div class="lane" style="--c:#37e2ff"><span class="n">3</span><h2>Digital twin core</h2>
+      <div class="box"><b>EHR → Bayesian priors</b><small>BMI, waist (South-Asian weighting), age → S<sub>I</sub>; duration + TCF7L2 → β-cell γ; FPG → G<sub>b</sub>; sulfonylurea → threshold</small></div>
+      <div class="box"><b>Physiology engine</b><small>Extended Bergman minimal model: dual-speed gut absorption, exercise memory, circadian and sleep-debt modulation, stress-driven EGP, metformin effect</small>
+        <div class="code" style="margin-top:4px">dG/dt = −(S<sub>G</sub>+X)G + S<sub>G</sub>G<sub>b</sub>′ + Ra − k<sub>ex</sub>AG + …</div></div>
+      <div class="box"><b>Calibration (onboarding, 3 days)</b><small>MAP cross-entropy search, 384 candidates × 3 rounds, batched NumPy, ~1 s/patient</small></div>
+      <div class="box"><b>Live assimilation + adaptive twin</b><small>Lag-compensated CGM observer every 5 min; nightly Bayesian re-calibration of S<sub>I</sub> and hepatic set-point; learned dawn phenomenon</small></div>
+    </div>
+    <div class="arrow"><svg viewBox="0 0 34 60"><path d="M2 30h26M20 20l10 10-10 10" fill="none" stroke="#37e2ff" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+    <div class="lane" style="--c:#2fd59a"><span class="n">4</span><h2>Hybrid AI layer</h2>
+      <div class="box"><b>Habit-aware twin forecasts</b><small>simulate 120 min ahead, with and without the expected meal</small></div>
+      <div class="box"><b>Causal features (52)</b><small>twin state + forecasts + its own recent errors, CGM trend, meals, steps, HRV/stress, sleep, circadian, EHR. Leak-tested</small></div>
+      <div class="box"><b>Residual quantile GBMs</b><small>learn (CGM − twin) at 30/60/120 min · P10/P50/P90</small></div>
+      <div class="box"><b>Conformal calibration</b><small>CQR on disjoint calibration patients → honest 80% intervals</small></div>
+      <div class="box"><b>Spike classifier + isotonic calibration</b><small>P(new excursion above 180 within 2 h); alert threshold = max sensitivity at ≥75% precision</small></div>
+    </div>
+    <div class="arrow"><svg viewBox="0 0 34 60"><path d="M2 30h26M20 20l10 10-10 10" fill="none" stroke="#37e2ff" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+    <div class="lane" style="--c:#ffb547"><span class="n">5</span><h2>Counterfactual reasoning</h2>
+      <div class="box"><b>Shapley driver attribution</b><small>2<sup>5</sup> = 32 twin simulations: meal load, inactivity, sleep debt, stress, missed dose</small></div>
+      <div class="box"><b>What-if simulator</b><small>24 h of physiology under walks, low-GI swaps, earlier dinner, sleep, metformin dose</small></div>
+      <div class="box"><b>Prescription search</b><small>54 candidate plans in one batched run, ranked by benefit per unit of effort</small></div>
+      <div class="box"><b>Insights &amp; nudges</b><small>personal glycaemic index for 28 foods, mined clinical brief, twin-tested advice in English and Hindi</small></div>
+    </div>
+    <div class="arrow"><svg viewBox="0 0 34 60"><path d="M2 30h26M20 20l10 10-10 10" fill="none" stroke="#37e2ff" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+    <div class="lane" style="--c:#ff5fae"><span class="n">6</span><h2>Clinician experience</h2>
+      <div class="box"><b>Clinic triage</b><small>40 live twins ranked by predicted risk and time to event</small></div>
+      <div class="box"><b>3D holographic twin</b><small>organs glow with live state (insulin, gut, liver, HR, stress, muscle); glucose-coloured blood flow; data streams fuse in</small></div>
+      <div class="box"><b>Spike countdown + drivers</b><small>ETA, peak, interval, Shapley bars</small></div>
+      <div class="box"><b>Ghost twin · What-If Lab</b><small>two futures side by side in 3D, time-lapsed and synced to the chart; 54 futures visualised</small></div><div class="box"><b>FHIR in &amp; out · Model card · Guided tour</b><small>RiskAssessment export, track record, validation transparency</small></div>
+      <div class="box"><b>Stdlib Python API</b><small>/cohort /patient /whatif /optimise /insights /fhir /fhir-out /metrics</small></div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="panel"><h3>Validation (10 held-out patients, 108 patient-days, never seen in training)</h3>
+      <div class="metric">
+        <div><b>27.6</b><span>mg/dL RMSE at 2 h (persistence 52.8)</span></div>
+        <div><b>0.905</b><span>spike AUROC (physics-only 0.80)</span></div>
+        <div><b>105 min</b><span>median warning time</span></div>
+        <div><b>99.0%</b><span>Clarke zone A+B at 2 h</span></div>
+      </div></div>
+    <div class="panel"><h3>Why hybrid beats black-box ML</h3><ul>
+      <li>2 training patients: RMSE 31.3 vs 38.1 (ML-only), 18% better</li>
+      <li>26% fewer false alarms (0.65 vs 0.88/day) at higher precision (82% vs 79%)</li>
+      <li>Explains and simulates. A plain predictor cannot</li></ul></div>
+    <div class="panel"><h3>Privacy &amp; standards</h3><ul>
+      <li>Synthetic data only. DPDP Act 2023 / HIPAA-safe sandbox</li>
+      <li>FHIR R4, LOINC, SNOMED-CT, RxNorm</li>
+      <li>ABHA / ABDM-ready identifiers</li></ul></div>
+    <div class="panel"><h3>Deployability</h3><ul>
+      <li>CPU-only, runs on a laptop; no GPU or cloud</li>
+      <li>Full pipeline in ~5 min; inference &lt; 50 ms per patient</li>
+      <li>Dependencies: numpy, scipy, pandas, scikit-learn</li></ul></div>
+  </div>
+  <div class="foot"><span>Sanjeevani Twin · Digital Twin Challenge 2026 · Happiest Health</span><span>Open source · MIT License</span></div>
+</body>
+</html>

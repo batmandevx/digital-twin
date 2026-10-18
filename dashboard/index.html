@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanjeevani Twin</title>
+<meta name="description" content="Sanjeevani: a hybrid physiology + AI digital twin for Type 2 Diabetes in India">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%2337e2ff'/><stop offset='1' stop-color='%238f7cf0'/></linearGradient></defs><circle cx='32' cy='32' r='28' fill='none' stroke='url(%23g)' stroke-width='5'/><path d='M14 34h9l4-10 7 20 5-14 3 4h8' fill='none' stroke='url(%23g)' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="importmap">
+{ "imports": {
+  "three": "./vendor/three/build/three.module.js",
+  "three/addons/": "./vendor/three/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<canvas id="bg-stars" aria-hidden="true"></canvas>
+
+<!-- ============ boot sequence ============ -->
+<div id="boot" role="status" aria-live="polite">
+  <div class="boot-inner">
+    <div class="boot-logo">
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <defs><linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#37e2ff"/><stop offset="1" stop-color="#8f7cf0"/></linearGradient></defs>
+        <circle cx="60" cy="60" r="52" class="boot-ring"/>
+        <circle cx="60" cy="60" r="40" class="boot-ring r2"/>
+        <path d="M22 62h18l8-20 13 40 10-28 6 8h21" class="boot-ecg"/>
+      </svg>
+    </div>
+    <h1>SANJEEVANI<span>TWIN</span></h1>
+    <p class="boot-sub">Hybrid physiology + AI digital twin for Type 2 Diabetes</p>
+    <div class="boot-steps" id="boot-steps"></div>
+    <div class="boot-bar"><i id="boot-bar"></i></div>
+  </div>
+</div>
+
+<!-- ============ app ============ -->
+<div id="app" hidden>
+  <header class="topbar">
+    <div class="brand">
+      <svg viewBox="0 0 64 64" class="brand-mark" aria-hidden="true"><circle cx="32" cy="32" r="27"/><path d="M12 34h10l4-10 7 20 5-14 3 4h11"/></svg>
+      <div>
+        <div class="brand-name">Sanjeevani<b>Twin</b></div>
+        <div class="brand-sub">Clinician command centre</div>
+      </div>
+    </div>
+
+    <div class="timebar">
+      <button class="icon-btn" id="btn-back" title="Back 1 hour" aria-label="Back one hour">
+        <svg viewBox="0 0 24 24"><path d="M11 6l-6 6 6 6M19 6l-6 6 6 6"/></svg></button>
+      <button class="play-btn" id="btn-play" title="Replay live (space)" aria-label="Play or pause live replay">
+        <svg viewBox="0 0 24 24" class="i-play"><path d="M8 5l11 7-11 7z"/></svg>
+        <svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+      <button class="icon-btn" id="btn-fwd" title="Forward 1 hour" aria-label="Forward one hour">
+        <svg viewBox="0 0 24 24"><path d="M13 6l6 6-6 6M5 6l6 6-6 6"/></svg></button>
+      <div class="clock">
+        <div class="clock-time" id="clock-time">--:--</div>
+        <div class="clock-date" id="clock-date">—</div>
+      </div>
+      <div class="scrub" id="scrub">
+        <div class="scrub-days" id="scrub-days"></div>
+        <input type="range" id="scrub-range" min="0" max="100" step="5" aria-label="Replay time">
+      </div>
+      <select id="speed" aria-label="Replay speed">
+        <option value="1600">1×</option><option value="800" selected>2×</option><option value="350">5×</option>
+      </select>
+    </div>
+
+    <div class="top-right">
+      <button class="tour-btn" id="btn-tour" title="Guided demo tour (T)"><svg viewBox="0 0 24 24"><path d="M8 5l11 7-11 7z"/></svg>Guided tour</button>
+      <span class="live-pill" id="live-pill"><i></i>REPLAY</span>
+      <span class="privacy-pill" title="All data is synthetic. No real patient information is used (DPDP Act and HIPAA safe).">
+        <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        Synthetic · DPDP-safe</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- cohort triage -->
+    <aside class="panel cohort" aria-label="Patient triage">
+      <div class="panel-head">
+        <h2>Clinic triage</h2>
+        <span class="muted small" id="cohort-count"></span>
+      </div>
+      <div class="cohort-summary" id="cohort-summary"></div>
+      <div class="chips" role="tablist" id="cohort-filter">
+        <button class="chip on" data-f="all">All</button>
+        <button class="chip" data-f="alert">Alerts</button>
+        <button class="chip" data-f="persona">Demo stories</button>
+      </div>
+      <input class="search" id="cohort-search" placeholder="Search patients…" aria-label="Search patients">
+      <ul class="cohort-list" id="cohort-list"></ul>
+    </aside>
+
+    <!-- centre: 3D twin -->
+    <section class="stage-wrap">
+      <div class="patient-head panel" id="patient-head"></div>
+      <div class="stage panel" id="stage">
+        <div id="three-root" aria-label="3D holographic digital twin of the patient"></div>
+        <div id="labels-layer" aria-hidden="true"></div>
+        <div class="hud hud-tl">
+          <div class="hud-label">Live glucose <span class="muted">· CGM</span></div>
+          <div class="hud-glucose"><span id="hud-g">—</span><small>mg/dL</small><span class="trend" id="hud-trend"></span></div>
+          <div class="hud-zone" id="hud-zone"></div>
+        </div>
+        <div class="hud hud-tr">
+          <div class="sync"><i></i>Twin synced <span id="hud-sync">—</span></div>
+          <div class="hud-mini" id="hud-mini"></div>
+        </div>
+        <div class="hud hud-bl">
+          <div class="legend-organs">
+            <span><i style="--c:#37e2ff"></i>Pancreas · insulin</span>
+            <span><i style="--c:#ffb547"></i>Liver · glucose output</span>
+            <span><i style="--c:#ff8a3d"></i>Gut · carbs absorbing</span>
+            <span><i style="--c:#ff4f7b"></i>Heart · HR</span>
+            <span><i style="--c:#a08cff"></i>Brain · stress</span>
+            <span><i style="--c:#2fe39a"></i>Muscle · uptake</span>
+          </div>
+        </div>
+        <div class="hud hud-br">
+          <button class="ghost-btn" id="btn-labels" aria-pressed="true">Labels</button>
+          <button class="ghost-btn" id="btn-rotate" aria-pressed="true">Auto-rotate</button>
+        </div>
+        <div class="organ-card" id="organ-card" hidden></div>
+        <div class="stage-mode" id="stage-mode"></div>
+        <div class="stage-fallback" id="stage-fallback" hidden>3D view needs WebGL and an internet connection to load three.js. All data panels still work.</div>
+      </div>
+    </section>
+
+    <!-- right: alert + drivers + nudge -->
+    <aside class="side">
+      <section class="panel alert-card" id="alert-card" aria-live="polite"></section>
+      <section class="panel" id="drivers-card"></section>
+      <section class="panel nudge-card" id="nudge-card"></section>
+    </aside>
+  </main>
+
+  <!-- lower workspace -->
+  <section class="workspace panel">
+    <nav class="tabs" role="tablist">
+      <button class="tab on" data-tab="forecast" role="tab">Forecast</button>
+      <button class="tab" data-tab="whatif" role="tab">What-If Lab</button>
+      <button class="tab" data-tab="insights" role="tab">AI insights <span class="new">NEW</span></button>
+      <button class="tab" data-tab="physiology" role="tab">Twin physiology</button>
+      <button class="tab" data-tab="records" role="tab">Records (FHIR)</button>
+      <button class="tab" data-tab="model" role="tab">Model card</button>
+      <span class="tab-ink" id="tab-ink"></span>
+    </nav>
+
+    <div class="tabpane on" id="tab-forecast">
+      <div class="fc-grid">
+        <div class="chart-card">
+          <div class="chart-head">
+            <h3>Glucose: last 12 h and 2-hour forecast</h3>
+            <div class="legend">
+              <span><i class="sw line" style="--c:var(--ink)"></i>CGM</span>
+              <span><i class="sw dash" style="--c:var(--c1)"></i>Twin + AI forecast</span>
+              <span><i class="sw band" style="--c:var(--c1)"></i>80% interval</span>
+              <span><i class="sw dot" style="--c:var(--c4)"></i>Physics-only twin</span>
+              <span><i class="sw dash" style="--c:var(--c3)"></i>Forecast made 2 h ago</span>
+              <span><i class="sw dash" style="--c:var(--c2)"></i>1 h ago</span>
+            </div>
+          </div>
+          <div id="glucose-chart" class="chart" role="img" aria-label="Glucose chart"></div>
+          <div id="strip-chart" class="chart strip"></div>
+        </div>
+        <div class="kpi-col" id="kpi-col"></div>
+      </div>
+      <div class="row3">
+        <div class="chart-card"><div class="chart-head"><h3>Sleep: last 7 nights</h3><div class="legend" id="sleep-legend"></div></div><div id="sleep-chart" class="chart"></div></div>
+        <div class="chart-card"><div class="chart-head"><h3>Daily time in range</h3><span class="muted small">70–180 mg/dL</span></div><div id="tir-chart" class="chart"></div></div>
+        <div class="chart-card"><div class="chart-head"><h3>Autonomic signals (24 h)</h3><span class="muted small">HRV · inferred stress</span></div><div id="hrv-chart" class="chart"></div></div>
+      </div>
+    </div>
+
+    <div class="tabpane" id="tab-whatif">
+      <div class="wi-grid">
+        <div class="wi-controls">
+          <h3>Prescribe a simulation</h3>
+          <p class="muted small">Change tomorrow and the twin re-simulates the next 24 hours of physiology.</p>
+          <label class="ctl"><span>Walk after meals <b id="v-walk">0 min</b></span><input type="range" id="c-walk" min="0" max="30" step="5" value="0"></label>
+          <label class="ctl"><span>Low-GI swap (millets, brown rice) <b id="v-swap">0%</b></span><input type="range" id="c-swap" min="0" max="1" step="0.25" value="0"></label>
+          <label class="ctl"><span>Dinner earlier by <b id="v-dinner">0 h</b></span><input type="range" id="c-dinner" min="0" max="3" step="0.5" value="0"></label>
+          <label class="ctl"><span>Sleep tonight <b id="v-sleep">7 h</b></span><input type="range" id="c-sleep" min="4" max="9" step="0.5" value="7"></label>
+          <label class="ctl"><span>Metformin dose <b id="v-met">1.0 g/day</b></span><input type="range" id="c-met" min="0" max="2.5" step="0.5" value="1"></label>
+          <label class="toggle"><input type="checkbox" id="c-snack"><span></span>Skip evening chai-snack</label>
+          <div class="wi-actions">
+            <button class="btn-primary" id="btn-optimise">
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.4 6.9H22l-6 4.6 2.3 7L12 16l-6.3 4.5 2.3-7-6-4.6h7.6z"/></svg>
+              Find the best plan</button>
+            <button class="ghost-btn" id="btn-reset">Reset</button>
+          </div>
+        </div>
+        <div class="chart-card">
+          <div class="chart-head"><h3 id="wi-title">Next 24 hours: current habits vs prescribed plan</h3>
+            <div class="legend"><span><i class="sw line" style="--c:var(--muted)"></i>Current habits</span><span><i class="sw line" style="--c:var(--c1)"></i>With plan</span></div></div>
+          <div id="whatif-chart" class="chart tall"></div>
+          <div class="wi-meals" id="wi-meals"></div>
+        </div>
+        <div class="wi-kpis" id="wi-kpis"></div>
+      </div>
+      <div id="opt-results" class="opt-results"></div>
+    </div>
+
+    <div class="tabpane" id="tab-insights"><div id="insights" class="ins-grid"></div></div>
+    <div class="tabpane" id="tab-physiology"><div id="physio" class="physio-grid"></div></div>
+    <div class="tabpane" id="tab-records"><div id="records" class="records-grid"></div></div>
+    <div class="tabpane" id="tab-model"><div id="modelcard" class="model-grid"></div></div>
+  </section>
+
+  <footer class="foot">
+    <span>Sanjeevani Twin · research prototype · not a medical device</span>
+    <span>All patients are synthetic. Built for the Digital Twin Challenge 2026 by Happiest Health.</span>
+  </footer>
+</div>
+
+<div id="loadbar"></div>
+<div id="tour" hidden><div class="tour-spot" id="tour-spot"></div><div class="tour-card" id="tour-card"></div></div>
+<div id="tooltip" role="tooltip"></div>
+<div id="toast"></div>
+
+<script src="js/charts.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

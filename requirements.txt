@@ -1,0 +1,5 @@
+# Sanjeevani Twin runtime. CPU-only, no GPU or cloud needed.
+numpy>=1.26
+scipy>=1.11
+pandas>=2.0
+scikit-learn>=1.3

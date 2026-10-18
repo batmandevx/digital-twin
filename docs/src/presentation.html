@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sanjeevani Twin: Presentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Noto+Sans+Devanagari:wght@500&display=swap" rel="stylesheet">
+<style>
+  @page { size: 338.67mm 190.5mm; margin: 0; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; background: #050a18; color: #e8f1ff; font: 18px/1.45 Inter, sans-serif; }
+  .slide { width: 338.67mm; height: 190.5mm; padding: 15mm 18mm 13mm; position: relative; overflow: hidden; page-break-after: always;
+    background: radial-gradient(900px 500px at 85% 0%, rgba(143,124,240,.22), transparent 60%), radial-gradient(900px 600px at 0% 100%, rgba(26,163,192,.18), transparent 60%), #050a18; }
+  .slide::after { content: attr(data-n); position: absolute; right: 18mm; bottom: 8mm; font: 12px "JetBrains Mono"; color: #4a5b82; }
+  .slide::before { content: "SANJEEVANI TWIN"; position: absolute; left: 18mm; bottom: 8mm; font: 600 11px "Space Grotesk"; letter-spacing: .25em; color: #4a5b82; }
+  h1 { font: 700 54px/1.05 "Space Grotesk"; margin: 0; letter-spacing: -.01em; }
+  h2 { font: 600 34px/1.15 "Space Grotesk"; margin: 0 0 8mm; }
+  h2 small { display: block; font: 500 15px Inter; color: #37e2ff; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 8px; }
+  .accent { color: #37e2ff; }
+  .muted { color: #9fb2d8; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7mm; }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6mm; }
+  .card { border: 1px solid rgba(130,190,255,.18); border-radius: 18px; padding: 16px 18px; background: rgba(13,24,54,.7); }
+  .card h3 { margin: 0 0 6px; font: 600 19px "Space Grotesk"; }
+  .card p { margin: 0; color: #c2d0ec; font-size: 15px; }
+  .big { font: 700 46px/1 "Space Grotesk"; color: #37e2ff; }
+  .big.p { color: #c4a7ff; } .big.g { color: #2fd59a; } .big.a { color: #ffb547; }
+  ul.clean { margin: 0; padding-left: 20px; color: #c2d0ec; }
+  ul.clean li { margin: 6px 0; }
+  img.shot { width: 100%; border-radius: 14px; border: 1px solid rgba(130,190,255,.25); box-shadow: 0 20px 60px rgba(0,0,0,.6); display: block; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { padding: 8px 10px; border-bottom: 1px solid rgba(130,190,255,.15); text-align: right; }
+  th:first-child, td:first-child { text-align: left; }
+  th { color: #9fb2d8; font-weight: 600; font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; }
+  td { font-family: "JetBrains Mono"; }
+  td:first-child { font-family: Inter; }
+  tr.ours td { background: rgba(26,163,192,.16); color: #fff; font-weight: 600; }
+  .pill { display: inline-block; border: 1px solid rgba(130,190,255,.35); border-radius: 99px; padding: 4px 12px; font-size: 13px; margin: 3px 4px 3px 0; color: #c2d0ec; }
+  .quote { font: 500 22px/1.4 "Space Grotesk"; border-left: 4px solid #37e2ff; padding-left: 16px; color: #dfe9ff; }
+  .hi { font-family: "Noto Sans Devanagari"; }
+  .flow { display: flex; align-items: center; gap: 10px; }
+  .flow .card { flex: 1; }
+  .flow .ar { color: #37e2ff; font-size: 28px; }
+</style>
+</head>
+<body>
+
+<section class="slide" data-n="01" style="display:flex;flex-direction:column;justify-content:center">
+  <div class="muted" style="letter-spacing:.3em;font:600 14px 'Space Grotesk';color:#37e2ff">DIGITAL TWIN CHALLENGE 2026 · HAPPIEST HEALTH</div>
+  <h1 style="margin-top:8mm;font-size:72px">Sanjeevani <span class="accent">Twin</span></h1>
+  <div style="font:500 28px 'Space Grotesk';margin-top:5mm;max-width:230mm">A hybrid physiology + AI digital twin that predicts Type 2 Diabetes glucose spikes <span class="accent">2 hours before they happen</span>, explains why, and tests the fix on a virtual patient.</div>
+  <div style="margin-top:10mm"><span class="pill">FHIR R4 EHR + CGM, HR, HRV, sleep, steps</span><span class="pill">Personalised physiology</span><span class="pill">Conformal AI</span><span class="pill">3D clinician dashboard</span><span class="pill">Built for India</span></div>
+  <div class="muted" style="margin-top:14mm;font-size:16px">Team: &lt;TEAM NAME&gt; · &lt;COLLEGE / INCUBATOR&gt; · &lt;Member names&gt;</div>
+</section>
+
+<section class="slide" data-n="02">
+  <h2><small>The problem</small>Indian diabetes care is reactive. Spikes happen between visits.</h2>
+  <div class="grid2">
+    <div>
+      <ul class="clean" style="font-size:19px">
+        <li><b>~101 million</b> Indians live with diabetes and <b>~136 million</b> with prediabetes (ICMR-INDIAB, <i>Lancet D&amp;E</i> 2023).</li>
+        <li>HbA1c is checked every 3 months. Daily post-meal spikes, which drive complications, go unseen.</li>
+        <li>Indian physiology and lifestyle break Western models: the <b>"thin-fat" phenotype</b>, rice- and roti-heavy meals, late dinners, and <b>festival fasting</b> such as Navratri sabudana.</li>
+        <li>Wearables and CGMs now generate streams of data, but doctors get <b>numbers, not foresight</b>.</li>
+      </ul>
+    </div>
+    <div class="card" style="align-self:start">
+      <div class="quote">"What will this patient's glucose do in the next two hours, why, and what is the smallest change that prevents the spike?"</div>
+      <p style="margin-top:14px">Sanjeevani answers this for every patient, continuously, from data a clinic already has or can get cheaply.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-n="03">
+  <h2><small>Our approach</small>A real twin, not just a predictor: physics + AI</h2>
+  <div class="flow">
+    <div class="card"><h3 style="color:#c4a7ff">EHR (static)</h3><p>FHIR R4: labs, diagnoses, meds, TCF7L2 genotype, PRS</p></div><div class="ar">+</div>
+    <div class="card"><h3 style="color:#5aa9ff">Wearables (dynamic)</h3><p>CGM · HR · HRV · sleep stages · steps · meal and med logs</p></div><div class="ar">→</div>
+    <div class="card"><h3 style="color:#37e2ff">Personal physiology</h3><p>ODE model of glucose, insulin, gut, exercise, circadian, sleep, stress. Calibrated per patient, synced every 5 min</p></div><div class="ar">→</div>
+    <div class="card"><h3 style="color:#2fd59a">AI on top</h3><p>Learns what physics misses. Conformal intervals and spike risk</p></div>
+  </div>
+  <div class="grid3" style="margin-top:10mm">
+    <div class="card"><div class="big">Predict</div><p style="margin-top:8px">Glucose at 30/60/120 min with 80% intervals. Spike-above-180 risk and countdown.</p></div>
+    <div class="card"><div class="big p">Explain</div><p style="margin-top:8px">Exact Shapley attribution over 32 counterfactual twin runs: meal, inactivity, sleep debt, stress, missed dose.</p></div>
+    <div class="card"><div class="big g">Simulate</div><p style="margin-top:8px">The doctor prescribes a plan and the twin simulates tomorrow. 54 candidate plans are searched in one batched run.</p></div>
+  </div>
+</section>
+
+<section class="slide" data-n="04">
+  <h2><small>Architecture</small>Six layers, CPU-only, four Python dependencies</h2>
+  <img class="shot" src="../images/architecture.png" style="height:128mm;width:auto;margin:0 auto">
+</section>
+
+<section class="slide" data-n="05">
+  <h2><small>Data fusion under sandbox rules</small>40 synthetic Indian patients × 14 days, deliberately imperfect</h2>
+  <div class="grid2">
+    <div class="card"><h3>What we generate</h3><ul class="clean">
+      <li>FHIR R4 bundles with LOINC/SNOMED/RxNorm codes (Synthea-compatible ingest)</li>
+      <li>4 regional diets and a 28-food Indian library with glycaemic-index splits</li>
+      <li>Navratri 2026 fasting, weekend biryani, late IT-shift dinners</li>
+      <li>CGM (5 min), HR, HRV, sleep stages, steps; meal and medication logs</li>
+      <li>6 story personas. All demo patients are <b>held out</b> from training</li></ul></div>
+    <div class="card"><h3>Why the evaluation is honest</h3><ul class="clean">
+      <li>The ground truth includes effects <b>the twin cannot see</b>: dawn phenomenon, unlogged snacks, ±22% carb-count error, day-to-day insulin-sensitivity drift, latent stress</li>
+      <li>CGM has 10-min lag, AR(1) noise, drift and dropouts</li>
+      <li>Patient-level split: 24 train, 6 calibration, 10 test</li>
+      <li>No real patient data. DPDP Act 2023 and HIPAA-safe</li></ul></div>
+  </div>
+</section>
+
+<section class="slide" data-n="06">
+  <h2><small>Personalisation</small>The twin learns each patient's hidden physiology</h2>
+  <div class="grid2">
+    <div>
+      <ul class="clean" style="font-size:18px">
+        <li><b>EHR → Bayesian priors.</b> BMI and waist (South-Asian weighting) give insulin sensitivity. Diabetes duration and <b>TCF7L2 rs7903146</b> risk alleles give beta-cell function. Fasting glucose gives the hepatic set-point.</li>
+        <li><b>3-day onboarding.</b> A MAP cross-entropy search fits the twin to CGM in about 1 s per patient.</li>
+        <li><b>Live sync.</b> A lag-compensated CGM observer keeps the twin's state current.</li>
+      </ul>
+    </div>
+    <div>
+      <table><thead><tr><th>Recovered parameter</th><th>r prior</th><th>r twin</th></tr></thead><tbody>
+        <tr><td>Insulin sensitivity S<sub>I</sub></td><td>0.76</td><td>0.89</td></tr>
+        <tr><td>Beta-cell responsiveness γ</td><td>0.65</td><td>0.83</td></tr>
+        <tr><td>Basal glucose G<sub>b</sub></td><td>0.86</td><td>0.98</td></tr></tbody></table>
+      <p class="muted" style="font-size:14px;margin-top:10px">Pearson correlation with the hidden ground truth across 40 patients. Median onboarding fit 17.3 mg/dL; open-loop simulation error 21.9 mg/dL over 11 unseen days. The twin also learns each patient's dawn phenomenon and re-calibrates itself every night (adaptive twin).</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-n="07">
+  <h2><small>Results · 10 held-out patients · 108 patient-days</small>Forecasts that beat every baseline</h2>
+  <div class="grid4" style="margin-bottom:8mm">
+    <div class="card"><div class="big">27.6</div><p>mg/dL RMSE at 2 h, <b>48% lower</b> than persistence</p></div>
+    <div class="card"><div class="big p">0.905</div><p>AUROC: new spike above 180 within 2 h · calibrated (ECE 0.06)</p></div>
+    <div class="card"><div class="big g">105 min</div><p>median warning time before a real excursion</p></div>
+    <div class="card"><div class="big a">99.0%</div><p>Clarke error grid zone A+B at 2 h</p></div>
+  </div>
+  <table><thead><tr><th>Model</th><th>RMSE 30 min</th><th>60 min</th><th>120 min</th><th>Spike AUROC</th><th>False alerts/day</th></tr></thead><tbody>
+    <tr><td>Persistence</td><td>26.6</td><td>42.6</td><td>52.8</td><td>—</td><td>—</td></tr>
+    <tr><td>Linear trend</td><td>31.2</td><td>62.3</td><td>101.3</td><td>0.546</td><td>—</td></tr>
+    <tr><td>Physics twin only</td><td>16.8</td><td>29.6</td><td>34.4</td><td>0.801</td><td>0.85</td></tr>
+    <tr><td>ML only (no twin)</td><td>15.0</td><td>24.1</td><td>28.1</td><td>0.896</td><td>0.88</td></tr>
+    <tr class="ours"><td>Sanjeevani hybrid</td><td>13.7</td><td>22.9</td><td>27.6</td><td>0.905</td><td>0.65</td></tr></tbody></table>
+</section>
+
+<section class="slide" data-n="08">
+  <h2><small>Why hybrid</small>Physics makes AI data-efficient, quieter and explainable</h2>
+  <div class="grid3">
+    <div class="card"><div class="big">−18%</div><h3 style="margin-top:8px">error with only 2 training patients</h3><p>2-h RMSE 31.3 vs 38.1 mg/dL for ML-only. The physics twin alone scores 34.4 with zero training patients, so it can start at a new clinic on day one.</p></div>
+    <div class="card"><div class="big p">−26%</div><h3 style="margin-top:8px">false alarms</h3><p>0.65 vs 0.88 per patient-day under the same alert policy, with higher precision (82% vs 79%). Alert fatigue is what kills clinical tools.</p></div>
+    <div class="card"><div class="big g">#1</div><h3 style="margin-top:8px">feature group = the twin</h3><p>Permutation importance: removing the twin's forecasts drops AUROC by 0.154, about 8× more than any wearable group alone.</p></div>
+  </div>
+  <p class="muted" style="margin-top:8mm;font-size:16px">Prediction intervals use conformalized quantile regression on disjoint calibration patients (76–78% observed coverage for a nominal 80%). Spike probabilities are isotonic-calibrated. A unit test proves features never use data from after the prediction time.</p>
+</section>
+
+<section class="slide" data-n="09">
+  <h2><small>Clinician dashboard</small>A living, holographic twin for every patient</h2>
+  <img class="shot" src="../images/dashboard.png" style="height:122mm;width:auto;margin:0 auto">
+</section>
+
+<section class="slide" data-n="10">
+  <h2><small>Story · Rajesh, 51, Lucknow · Navratri, 16 Oct 2026, 12:15</small>The twin sees the sabudana spike coming</h2>
+  <div class="grid2">
+    <img class="shot" src="../images/forecast_crop.png">
+    <div><ul class="clean" style="font-size:18px">
+      <li>Fasting foods in today's log, so the <b>festival-aware twin</b> expects a sabudana lunch</li>
+      <li><b>80% spike risk</b>: crossing 180 in <b>1 h 30 m</b>, predicted peak 236</li>
+      <li><b>Why:</b> meal glycaemic load +28 mg/dL, post-meal inactivity +5</li>
+      <li><b>Nudge, twin-tested, sent in Hindi:</b><br><span class="hi">"आज दोपहर के भोजन में फल लें। शुगर लगभग 79 mg/dL कम बढ़ेगा।"</span></li>
+      <li>The actual CGM peaked at 285. The warning was real.</li></ul></div>
+  </div>
+</section>
+
+<section class="slide" data-n="11">
+  <h2><small>What-If Lab</small>Prescribe a simulation and see tomorrow</h2>
+  <div class="grid2">
+    <img class="shot" src="../images/whatif_crop.png">
+    <div><ul class="clean" style="font-size:18px">
+      <li>Sliders: post-meal walk, low-GI swap (millets, brown rice), earlier dinner, sleep, metformin dose</li>
+      <li><b>"Find the best plan"</b> simulates <b>54 possible tomorrows</b> in one batched run and ranks them by benefit per unit of effort</li>
+      <li>Rajesh's recommended plan: a 20-min walk after lunch and dinner plus a low-GI swap. Peak drops by 96 mg/dL, hyperglycaemia by 72%, and projected HbA1c falls 7.2% → 7.1% in 90 days</li></ul></div>
+  </div>
+</section>
+
+<section class="slide" data-n="12">
+  <h2><small>Ghost twin</small>Two futures, side by side, before the patient changes anything</h2>
+  <div class="grid2">
+    <img class="shot" src="../images/ghost.png">
+    <div><ul class="clean" style="font-size:18px">
+      <li>In the What-If Lab the 3D view splits in two: <b>current habits</b> on the left and the <b>prescribed plan</b> on the right</li>
+      <li>Both bodies are time-lapsed through the next 24 h of simulated physiology. Blood colour, glucose numbers and the chart cursor move in sync</li>
+      <li>At 14:20 on Navratri: <b>273 mg/dL</b> on current habits vs <b>212 mg/dL</b> with the plan</li>
+      <li>Doctors and patients <i>see</i> the benefit. That is what drives behaviour change</li></ul></div>
+  </div>
+</section>
+
+<section class="slide" data-n="13">
+  <h2><small>AI insights</small>A personal glycaemic index and a clinical brief</h2>
+  <div class="grid2">
+    <img class="shot" src="../images/insights_crop.png">
+    <div><ul class="clean" style="font-size:18px">
+      <li><b>Personal glycaemic index:</b> all 28 Indian foods simulated on <i>this</i> patient's adaptive twin, not a population GI table</li>
+      <li><b>Clinical brief</b> mined from 14 days of data: biggest-spike foods, fasting effect (+19 mg/dL), adherence (83%), dawn phenomenon (+32 mg/dL)</li>
+      <li><b>Track record:</b> the twin's own 30/60/120-min errors and interval coverage, shown openly</li>
+      <li><b>FHIR out:</b> predictions exported as RiskAssessment + Observation + Communication, ABDM-ready</li></ul></div>
+  </div>
+</section>
+
+<section class="slide" data-n="14">
+  <h2><small>Impact &amp; deployment in India</small>Built for the PHC, not just the cloud</h2>
+  <div class="grid3">
+    <div class="card"><h3>Clinicians</h3><p>Triage 40 patients at a glance, ranked by predicted risk and time to event. Spend minutes where they matter.</p></div>
+    <div class="card"><h3>Patients</h3><p>Small, specific, twin-tested nudges in Hindi and English, tuned for thalis, festivals and late dinners.</p></div>
+    <div class="card"><h3>Health system</h3><p>FHIR R4 and ABHA-ready for the Ayushman Bharat Digital Mission. Runs on CPU with no GPU, so it suits low-resource settings.</p></div>
+  </div>
+  <div class="grid2" style="margin-top:8mm">
+    <div class="card"><h3>Roadmap</h3><ul class="clean"><li>Retrospective validation on open CGM datasets (e.g. PhysioNet BIG IDEAs)</li><li>Silent-mode pilot with a partner diabetes clinic</li><li>More twins: hypertension and cardiovascular risk on the same engine</li><li>Regional languages and voice nudges via ASHA workers</li></ul></div>
+    <div class="card"><h3>Responsible AI</h3><ul class="clean"><li>Synthetic data only; DPDP Act and HIPAA sandbox</li><li>Calibrated uncertainty and a transparent model card</li><li>Decision support only. Not a device, never doses insulin</li><li>Open source (MIT) and fully reproducible with one command</li></ul></div>
+  </div>
+</section>
+
+<section class="slide" data-n="15" style="display:flex;flex-direction:column;justify-content:center">
+  <h1>Prediction is useful.<br><span class="accent">Simulation changes care.</span></h1>
+  <div style="font:500 22px 'Space Grotesk';margin-top:10mm" class="muted">Sanjeevani Twin: see the spike, know the cause, test the fix.</div>
+  <div style="margin-top:12mm;font:16px 'JetBrains Mono'">github.com/&lt;your-handle&gt;/&lt;TeamName_CollegeName&gt; · python run.py</div>
+</section>
+
+</body>
+</html>
